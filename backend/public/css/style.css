@@ -1,0 +1,57 @@
+/* 
+    SMALL ICON
+    - navbar icons
+    - title.blade
+    - posts/show.blade
+    - User Suggestions in Homepage
+    - following.blade
+    - followers.blade
+*/
+
+.fa-heart{
+    font-size: 1.5rem;
+}
+
+.icon-sm{
+    font-size: 2rem;
+}
+
+.xsmall{
+    font-size: .65rem;
+}
+
+.icon-md{
+    font-size: 3rem;
+}
+
+.icon-lg{
+    font-size: 9rem;
+}
+
+.avatar-lg
+{
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+}
+
+.avatar-sm
+{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit:cover;
+}
+
+.avatar-md
+{
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit:cover;
+}
+
+.admin-posts-img
+{
+    width: 3.5rem;
+    height: 4rem;
+    object-fit: cover;
+}
