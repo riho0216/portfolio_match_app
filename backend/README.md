@@ -1,64 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+### アプリケーションの名前
+Wear-Rental-App
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### アプリケーションの概要
+訪日外国人旅行客向けのアウターレンタルサービス
 
-## About Laravel
+### 制作背景
+前職が旅行業だったことからインバウンドに関しても興味を持っていた。街中でも多く外国人観光客を見かけるが、温暖な気候で暮らす人々（台湾、タイ、フィリピン、インドネシア、マレーシアなど）が冬の日本観光に訪れている時に購入したアウターは自国に持って帰っているのだろうか、と疑問がわいた。アウターがレンタルできるサービスがあれば、荷物が減り秋～冬の日本観光でお土産などもっとスーツケースが詰められるし、地球環境に優しい取り組みになるのではないかと考えた。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 使用技術
+* HTML
+* CSS
+* PHP（Laravel）
+* MySQL
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 機能一覧
+* 登録、ログイン機能
+* 登録者へのメール機能
+* 商品へのコメント機能
+* いいねのカウント機能
+* プロフィール機能
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* [admin / 店側]
+  * 商品アップ機能
+  * 商品編集、商品消去機能
+  * ユーザー、商品データ管理機能（ユーザーデータ一覧/商品一覧/タグ追加/ジェンダー追加）
 
-## Learning Laravel
+* [user / 客側]
+  * カート機能
+  * いいねした商品を一覧できる機能
+  * 商品個数・レンタル期間での計算機能、返却日計算機能
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### こだわった部分
+* 商品を多く見れるよう３列配置にした
+* カート機能では商品個数×レンタル期間で合計金額が計算できるようにし、返却日も計算して見えるようにした。
+* adminではタグの数や投稿データをわかりやすく一覧できるようにした。
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### 苦労した部分
+カート内の計算式。ループを使い商品ID等のデータを取り出し、ループを使って計算するところが一番時間を使った。
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### 今後追加したい機能（現段階でできてない箇所）
+計算後の支払い機能
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
